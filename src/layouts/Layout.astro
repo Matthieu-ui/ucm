@@ -18,8 +18,8 @@ const resolvedImageWithDomain = new URL(
 const { title } = Astro.props;
 
 const makeTitle = title
-  ? title + " | " + "Astroship"
-  : "Astroship - Starter Template for Astro with Tailwind CSS";
+  ? title + " | " + "UCM"
+  : "UCM - Quality Materials, Trusted Service";
 ---
 
 <!DOCTYPE html>
@@ -31,9 +31,11 @@ const makeTitle = title
     <meta name="generator" content={Astro.generator} />
 
     <!-- <link rel="preload" as="image" href={src} alt="Hero" /> -->
+
+    <!-- TO DO : correct info/ optimize SEO -->
     <SEO
       title={makeTitle}
-      description="Astroship is a starter website template for Astro built with TailwindCSS."
+      description="As one of the largest independent building material supplier serving Alaska and the Pacific Northwest, Uresco offers institutional, commercial and residential builders the best selection, pricing and service. Uresco's reliable service includes dependable site delivery to job sites down the road or across an ocean."
       canonical={canonicalURL}
       twitter={{
         creator: "@surjithctly",

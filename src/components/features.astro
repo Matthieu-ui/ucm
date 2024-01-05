@@ -4,66 +4,71 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Framing/Lumber",
+    title: "Lumber and Building Materials",
     description:
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+      "Build with precision using our standardized lumber, perfect for a variety of construction and carpentry projects.",
     icon: "bx:bxs-briefcase",
   },
   {
-    title: "Plywood/OSB",
+    title: "Structural Components/EWP",
     description:
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    icon: "bx:bxs-window-alt",
-  },
-  {
-    title: "Insulation",
-    description:
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    icon: "bx:bxs-data",
-  },
-  {
-    title: "Drywall",
-    description:
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+      "Ensure robust structural support with our high-quality timbers, designed to meet the demands of your construction projects.",
     icon: "bx:bxs-bot",
   },
   {
-    title: "Roofing",
+    title: "Insulation and Weatherproofing",
     description:
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+      "Choose reliability and versatility with our plywood selection, ideal for various construction and woodworking applications.",
+    icon: "bx:bxs-user",
+  },
+  
+  {
+    title: "James Hardie Siding",
+    description:
+      "Discover the strength and versatility of OSB, a dependable choice for various construction applications.",
+    icon: "bx:bxs-user",
+  },
+  {
+    title: "Specialized Lumber Products",
+    description:
+      "Create stunning outdoor spaces with our durable cedar decking, offering both beauty and resilience against the elements.",
     icon: "bx:bxs-file-find",
   },
   {
-    title: "Siding",
+    title: "Hardware and Fasteners",
     description:
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    icon: "bx:bxs-user",
+      "Enhance the aesthetics and durability of your exteriors with our premium cedar siding and trims, showcasing the natural beauty of cedar wood.",
+    icon: "bx:bxs-window-alt",
   },
+  
 ];
 ---
 <div class="grid lg:grid-cols-2 sm:grid-cols-1 mt-4 gap-16">
 <div class="mt-4 md:mt-0 ">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+  <h2 class="text-2xl lg:text-5xl font-bold lg:tracking-tight">
    Quality Materials
   </h2>
   
   <p class="text-lg mt-4 text-slate-600">
 Uresco is your dependable source for quality materials to get the job built.
   </p>
-     <a class="float-right hover:cursor-pointer">learn more</a>
+     <a class="float-right hover:cursor-pointer hover:drop-shadow-lg hover:underline">Learn more</a>
 </div>
 <div class="mt-4 md:mt-0 ">
-  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+  <h2 class="text-2xl lg:text-5xl font-bold lg:tracking-tight">
    Trusted service
   </h2>
   
   <p class="text-lg mt-4 text-slate-600">
   Uresco specializes in remote site delivery. We can work with you on all aspects of shipping coordination, dock delivery and rural Alaska delivery.
   </p>
-   <a class="float-right hover:cursor-pointer">learn more</a>
+  <a class="float-right hover:cursor-pointer hover:drop-shadow-lg hover:underline">Learn more</a>
 </div>
 </div>
 
+
+
+<!-- Add specific sub categories (list) to products and services -->
 <div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
   {
     features.map((item) => (

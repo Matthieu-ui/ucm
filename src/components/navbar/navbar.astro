@@ -1,17 +1,22 @@
 ---
 import Container from "@components/container.astro";
-import Link from "@components/ui/link.astro";
 import Dropdown from "./dropdown.astro";
 import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import UcmLogoSm from "assets/ucmSmall.png";
+import { Picture } from "astro:assets";
 
 const menuitems = [
   {
     title: "Products & services",
     path: "#",
     children: [
-      { title: "Action", path: "/" },
-      { title: "Another action", path: "#" },
-      { title: "Dropdown Submenu", path: "#" },
+      { title: "home", path: "/" },
+      { title: "Lumber and Building Materials", path: "#" },
+      { title: "Structural Components/EWP", path: "#" },
+      { title: "Insulation and Weatherproofing", path: "#" },
+      { title: "James Hardie Siding", path: "#" },
+      { title: "Hardware and Fasteners", path: "#" },
+      { title: "Specialized Lumber Products", path: "#" },
       { title: "404 Page", path: "/404" },
     ],
   },
@@ -40,9 +45,16 @@ const menuitems = [
     <Astronav>
       <div class="flex w-full lg:w-auto items-center justify-between">
         <a href="/" class="text-lg"
-          ><span class="font-bold text-slate-800">Astro</span><span
-            class="text-slate-500">ship</span
-          >
+          ><span class="">
+            <Picture
+            src={UcmLogoSm}
+            alt="Ucm logo"
+            sizes="(max-width: 200px) 50vw, 200px"
+            loading="eager"
+            format="avif"
+            
+          />
+            </span>
         </a>
         <div class="block lg:hidden">
           <MenuIcon class="w-4 h-4 text-gray-800" />
