@@ -1,0 +1,58 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import Sectionhead from "@components/sectionhead.astro";
+import PricingCard from "@components/alaska.astro";
+
+const pricing = [
+  {
+    name: "Uresco",
+    price: "Anchorage",
+    popular: false,
+    features: [
+      "Lifetime free",
+      "Up to 3 users",
+      "Unlimited Pages",
+      "Astro Sub domain",
+      "Basic Integrations",
+      "Community Support",
+    ],
+    button: {
+      text: "Get Started",
+      link: "/",
+    },
+  },
+  {
+    name: "Uresco",
+    price: "Fairbanks",
+    popular: false,
+    features: [
+      "Lifetime free",
+      "Up to 3 users",
+      "Unlimited Pages",
+      "Astro Sub domain",
+      "Basic Integrations",
+      "Community Support",
+    ],
+    button: {
+      text: "Get Started",
+      link: "/",
+    },
+  }
+];
+---
+
+<Layout title="Alaska">
+  <Container>
+    <Sectionhead>
+      <Fragment slot="title">Alaska</Fragment>
+      <Fragment slot="desc">
+        Simple & Predictable pricing. No Surprises.
+      </Fragment>
+    </Sectionhead>
+
+    <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-screen-lg mt-12">
+      {pricing.map((item) => <PricingCard plan={item} />)}
+    </div>
+  </Container>
+</Layout>

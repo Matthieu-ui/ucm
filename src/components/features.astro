@@ -4,7 +4,7 @@ import { Icon } from "astro-icon";
 
 const features = [
   {
-    title: "Lumber and Building Materials",
+    title: "Lumber and Timber",
     description:
       "Build with precision using our standardized lumber, perfect for a variety of construction and carpentry projects.",
     icon: "bx:bxs-briefcase",
@@ -49,7 +49,7 @@ const features = [
    Quality Materials
   </h2>
   
-  <p class="text-lg mt-4 text-slate-600">
+  <p class="text-lg mt-4 text-slate-600 upperca">
 Uresco is your dependable source for quality materials to get the job built.
   </p>
      <a class="float-right hover:cursor-pointer hover:drop-shadow-lg hover:underline">Learn more</a>
@@ -77,8 +77,8 @@ Uresco is your dependable source for quality materials to get the job built.
           <Icon class="text-white" name={item.icon} />
         </div>
         <div>
-          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
-          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <ul><h3 class="font-semibold text-lg">{item.title}</h3>{" "}</ul>
+          <li class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
         </div>
       </div>
     ))
