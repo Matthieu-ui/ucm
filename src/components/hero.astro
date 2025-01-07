@@ -1,35 +1,26 @@
 ---
 import { Picture } from "astro:assets";
-import heroImage from "assets/UCMcolorMd.png";
+import heroImage from "assets/header-default.jpg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
+import Slideshow from "components/Slideshow";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 ">
-  <div class="py-6 md:order-1 hidden md:block">
-    <Picture
-      src={heroImage}
-      alt="UCM Logo Motto"
-      widths={[100, 200, 400]}
-      sizes="(max-width: 800px) 100vw, 620px"
-      loading="eager"
-      format="avif"
-    />
-  </div>
-  <div class="">
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 relative">
+  <div class="header">
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
-   
+      Welcome to Uresco
     </h1>
-    <p class="text-lg mt-4 text-slate-700 max-w-xl">
-    For more than 35 years, Uresco has been a trusted source for quality building materials throughout the Pacific Northwest and all of Alaska.
-    </p>
-    <p class="pt-5 text-sm">
-    As one of the largest independent building material supplier serving Alaska and the Pacific Northwest, Uresco offers institutional, commercial and residential builders the best selection, pricing and service. Uresco's reliable service includes dependable site delivery to job sites down the road or across an ocean.
-    </p>
-    <div class="mt-6 flex flex-col sm:flex-row gap-3">
-
-    </div>
   </div>
+
+
+    <Slideshow client:load 
+    alt="UCM Logo Motto"
+    widths={[100, 200, 400]}
+    sizes="(max-width: 800px) 100vw, 620px"
+    loading="eager"
+    format="avif" />
+ 
 </main>
