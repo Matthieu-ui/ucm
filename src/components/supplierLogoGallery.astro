@@ -1,0 +1,66 @@
+---
+import { useState } from 'react';
+
+const logos = [
+  '/assets/logos/asc.png',
+  '/assets/logos/james_hardie.png'
+
+  // Add more logo paths here
+];
+
+const [currentIndex, setCurrentIndex] = useState(0);
+
+const handlePrev = () => {
+  setCurrentIndex((prevIndex) => (prevIndex - 1 + logos.length) % logos.length);
+};
+
+const handleNext = () => {
+  setCurrentIndex((prevIndex) => (prevIndex + 1) % logos.length);
+};
+---
+<div class="gallery-container">
+  <button class="nav-button left" onClick={handlePrev}>&lt;</button>
+  <div class="logo-display">
+    <img src={logos[currentIndex]} alt={`Logo ${currentIndex + 1}`} />
+  </div>
+  <button class="nav-button right" onClick={handleNext}>&gt;</button>
+</div>
+
+<style>
+  .gallery-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .nav-button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: background-color 0.3s;
+  }
+
+  .nav-button:hover {
+    background-color: #005fa3;
+  }
+
+  .logo-display {
+    width: 200px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  .logo-display img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+</style>
