@@ -1,6 +1,8 @@
 ---
+
 import { Icon } from "astro-icon";
 import Slideshow from "components/Slideshow";
+
 
 const features = [
   {
@@ -72,8 +74,55 @@ const features = [
       loading="eager"
       format="avif"
     />
-    <div class="contact-info bg-gray-100 p-6 rounded-lg shadow-lg space-y-4">
-      <h2 class="text-2xl font-bold">Contact Us</h2>
+
+
+    </div>
+  </div>
+</div>
+
+<!-- Products & Services Section -->
+<div class="space-y-8 mt-16">
+  <div class="text-center">
+    <h2 class="text-2xl font-bold">Our Products & Services</h2>
+    <p class="text-gray-600 mt-2">
+      From quality materials to professional services, we have everything you need for your construction projects.
+    </p>
+  </div>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
+    <div>
+      <h3 class="text-xl font-bold mb-4">Products</h3>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Framing/Lumber</li>
+        <li>Plywood/OSB</li>
+        <li>Insulation</li>
+        <li>Drywall</li>
+        <li>Roofing</li>
+        <li>Siding</li>
+        <li>Engineered Wood</li>
+        <li>Form Panels</li>
+        <li>Windows/Doors</li>
+        <li>Custom Cabinets</li>
+        <li>Pressure Treated</li>
+        <li>Cedar</li>
+        <li>Fire Treated</li>
+        <li>Fasteners</li>
+      </ul>
+    </div>
+    <div>
+      <h3 class="text-xl font-bold mb-4">Services</h3>
+      <ul class="list-disc pl-6 space-y-2 text-gray-700">
+        <li>Crating/Packaging</li>
+        <li>Job Site Delivery</li>
+        <li>Estimates</li>
+        <li>Material Take Off</li>
+        <li>Design Services</li>
+      </ul>
+    </div>
+    <div class="bg-gray-100 p-6 rounded-lg shadow-lg text-center">
+      <h3 class="text-lg font-bold">Ready to Get Started?</h3>
+      <p class="mt-2 text-gray-600">
+        Contact us today for estimates, design assistance, or to learn more about our materials and services.
+      </p>
       <p>Serving the Pacific Northwest and Alaska</p>
       <div class="space-y-4">
         <div>
@@ -94,7 +143,9 @@ const features = [
         <p>
           <a href="mailto:sales@uresco.com" class="text-blue-500 underline">sales@uresco.com</a>
         </p>
-      </div>
+      <a href="/contact" class="mt-4 inline-block px-6 py-3 text-white bg-blue-500 rounded hover:bg-blue-600">
+        Contact Us
+      </a>
     </div>
   </div>
 </div>
