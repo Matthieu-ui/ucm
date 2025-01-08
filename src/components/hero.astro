@@ -3,11 +3,12 @@ import { Picture } from "astro:assets";
 import heroImage from "assets/header-default.jpg";
 import Link from "@components/ui/link.astro";
 import { Icon } from "astro-icon";
-import Slideshow from "components/Slideshow";
 ---
 
 <main
-  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 relative">
+  class="grid lg:grid-cols-3 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 relative">
+  
+  <!-- Left Column: Heading -->
   <div class="header">
     <h1
       class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
@@ -15,12 +16,6 @@ import Slideshow from "components/Slideshow";
     </h1>
   </div>
 
-
-    <Slideshow client:load 
-    alt="UCM Logo Motto"
-    widths={[100, 200, 400]}
-    sizes="(max-width: 800px) 100vw, 620px"
-    loading="eager"
-    format="avif" />
  
+
 </main>

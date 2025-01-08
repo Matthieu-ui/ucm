@@ -1,6 +1,6 @@
 ---
-// @ts-ignore
 import { Icon } from "astro-icon";
+import Slideshow from "components/Slideshow";
 
 const features = [
   {
@@ -21,7 +21,6 @@ const features = [
       "Choose reliability and versatility with our plywood selection, ideal for various construction and woodworking applications.",
     icon: "bx:bxs-user",
   },
-  
   {
     title: "James Hardie Siding",
     description:
@@ -40,47 +39,77 @@ const features = [
       "Enhance the aesthetics and durability of your exteriors with our premium cedar siding and trims, showcasing the natural beauty of cedar wood.",
     icon: "bx:bxs-window-alt",
   },
-  
 ];
 ---
-<div class="grid lg:grid-cols-2 sm:grid-cols-1 mt-4 gap-16">
-<div class="mt-4 md:mt-0 ">
-  <h2 class="text-2xl lg:text-5xl font-bold lg:tracking-tight">
-   Quality Materials
-  </h2>
-  
-  <p class="text-lg mt-4 text-slate-600 upperca">
-Uresco is your dependable source for quality materials to get the job built.
-  </p>
-     <a class="float-right hover:cursor-pointer hover:drop-shadow-lg hover:underline">Learn more</a>
-</div>
-<div class="mt-4 md:mt-0 ">
-  <h2 class="text-2xl lg:text-5xl font-bold lg:tracking-tight">
-   Trusted service
-  </h2>
-  
-  <p class="text-lg mt-4 text-slate-600">
-  Uresco specializes in remote site delivery. We can work with you on all aspects of shipping coordination, dock delivery and rural Alaska delivery.
-  </p>
-  <a class="float-right hover:cursor-pointer hover:drop-shadow-lg hover:underline">Learn more</a>
-</div>
-</div>
 
+<!-- Main Content -->
+<div class="grid lg:grid-cols-2 gap-12 mt-8">
+  <!-- Left Section: Quality and Trusted Service -->
+  <div class="space-y-12">
+    <div>
+      <h2 class="text-3xl font-bold tracking-tight">Quality Materials</h2>
+      <p class="text-lg mt-4 text-slate-600">
+        Uresco is your dependable source for quality materials to get the job built.
+      </p>
+      <a class="text-blue-500 hover:underline mt-2 inline-block">Learn more</a>
+    </div>
+    <div>
+      <h2 class="text-3xl font-bold tracking-tight">Trusted Service</h2>
+      <p class="text-lg mt-4 text-slate-600">
+        Uresco specializes in remote site delivery. We can work with you on all aspects of shipping coordination, dock delivery, and rural Alaska delivery.
+      </p>
+      <a class="text-blue-500 hover:underline mt-2 inline-block">Learn more</a>
+    </div>
+  </div>
 
-
-<!-- Add specific sub categories (list) to products and services -->
-<div class="grid sm:grid-cols-2 md:grid-cols-3 mt-16 gap-16">
-  {
-    features.map((item) => (
-      <div class="flex gap-4 items-start">
-        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
-          <Icon class="text-white" name={item.icon} />
+  <!-- Right Section: Slideshow and Contact Info -->
+  <div class="space-y-8">
+    <Slideshow
+      client:load 
+      alt="UCM Logo Motto"
+      widths={[100, 200, 400]}
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+    <div class="contact-info bg-gray-100 p-6 rounded-lg shadow-lg space-y-4">
+      <h2 class="text-2xl font-bold">Contact Us</h2>
+      <p>Serving the Pacific Northwest and Alaska</p>
+      <div class="space-y-4">
+        <div>
+          <h3 class="text-lg font-semibold">Kent</h3>
+          <p>(800) 275-8333<br>(253) 395-1211</p>
         </div>
         <div>
-          <ul><h3 class="font-semibold text-lg">{item.title}</h3>{" "}</ul>
-          <li class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+          <h3 class="text-lg font-semibold">Anchorage</h3>
+          <p>(888) 563-2500<br>(907) 563-2500</p>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold">Fairbanks</h3>
+          <p>(907) 456-1550</p>
         </div>
       </div>
-    ))
-  }
+      <div class="email mt-4">
+        <h3 class="text-lg font-semibold">Email Us</h3>
+        <p>
+          <a href="mailto:sales@uresco.com" class="text-blue-500 underline">sales@uresco.com</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features Section -->
+<div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8 mt-16">
+  {features.map((item) => (
+    <div class="flex gap-4 items-start bg-gray-50 p-4 rounded-lg shadow">
+      <div class="bg-black rounded-full p-2 w-12 h-12 flex items-center justify-center">
+        <Icon class="text-white w-6 h-6" name={item.icon} />
+      </div>
+      <div>
+        <h3 class="font-semibold text-lg">{item.title}</h3>
+        <p class="text-slate-500 mt-2">{item.description}</p>
+      </div>
+    </div>
+  ))}
 </div>
